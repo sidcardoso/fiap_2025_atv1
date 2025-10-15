@@ -18,13 +18,9 @@ https://wokwi.com/projects/444836742376161281
 https://github.com/sidcardoso/fiap_2025_atv1/blob/main/esp32_code/irrigation_system.ino
 
 
-4. Vídeo YouTube (não listado, até 5 minutos):
-[LINK DO YOUTUBE - Você precisa gravar e fazer upload do vídeo]
-Instruções:
-- Grave o vídeo demonstrando o sistema no Wokwi (máx 5 min)
-- Faça upload no YouTube como "Não listado"
-- O link será algo como: https://youtu.be/XXXXXXXXXXX
-- Copie e cole acima substituindo esta linha
+4. Vídeo YouTube:
+[LINK DO YOUTUBE]
+https://youtu.be/lKEF92BjoUY
 
 ================================================================================
 RESUMO DO PROJETO
