@@ -10,12 +10,8 @@ https://github.com/sidcardoso/fiap_2025_atv1
 
 
 2. Imagem do Circuito no Wokwi:
-[LINK DO WOKWI - Você precisa salvar o projeto no Wokwi e colar o link aqui]
-Instruções:
-- No Wokwi, clique em "Save" (botão azul superior esquerdo)
-- Faça login se necessário
-- O link será algo como: https://wokwi.com/projects/XXXXXXXXXXXXXXXXX
-- Copie e cole acima substituindo esta linha
+[LINK DO WOKWI]
+https://wokwi.com/projects/444836742376161281
 
 
 3. Código C/C++ do ESP32:
@@ -142,5 +138,5 @@ Antes de enviar, verifique:
 Projeto desenvolvido por: Sidney de Lirio Cardoso
 Curso: FIAP - Engenharia de Software
 Disciplina: Computational Thinking with Python - Fase 2
-Data: Outubro 2024
+Data: Outubro 2025
 GitHub: https://github.com/sidcardoso/fiap_2025_atv1
