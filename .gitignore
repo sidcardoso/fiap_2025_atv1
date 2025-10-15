@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+*.log
+
+# R
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Arquivos temporários
+*.tmp
+*.bak
+*~
+
+# Dados sensíveis
+config_local.py
+.env
+*.key

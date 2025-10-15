@@ -1,0 +1,79 @@
+ATIVIDADE 1 – UM MAPA DO TESOURO
+FarmTech Solutions - Sistema de Irrigação Inteligente com IoT
+
+================================================================================
+LINKS PARA ENTREGA
+================================================================================
+
+1. Repositório GitHub (Código + README.md):
+https://github.com/sidcardoso/fiap_2025_atv1
+
+
+2. Imagem do Circuito no Wokwi:
+[AGUARDANDO: Você precisa criar o projeto no Wokwi e colar o link aqui]
+Exemplo: https://wokwi.com/projects/XXXXXXXXXXXXXXXXX
+
+
+3. Código C/C++ do ESP32:
+https://github.com/sidcardoso/fiap_2025_atv1/blob/main/esp32_code/irrigation_system.ino
+
+
+4. Vídeo YouTube (não listado, até 5 minutos):
+[AGUARDANDO: Você precisa gravar e fazer upload do vídeo no YouTube]
+Exemplo: https://youtu.be/XXXXXXXXXXX
+
+================================================================================
+RESUMO DO PROJETO
+================================================================================
+
+📋 Requisitos Atendidos:
+✅ Simulação de dispositivo IoT para agricultura
+✅ Código ESP32 com sensores (NPK, pH, umidade)
+✅ Controle automático de irrigação
+✅ Lógica de decisão implementada
+✅ Documentação completa (README.md)
+✅ EXTRA: Integração API OpenWeather (Python)
+✅ EXTRA: Análise estatística em R
+
+🔧 Componentes:
+- 3 Botões (Sensores NPK: Nitrogênio, Fósforo, Potássio)
+- 1 Sensor LDR (Medição de pH do solo)
+- 1 Sensor DHT22 (Umidade e temperatura do solo)
+- 1 Relé (Controle da bomba de irrigação)
+- 1 LED (Indicador visual de status)
+- ESP32 (Microcontrolador principal)
+
+🌟 Diferenciais Implementados:
+- Integração com API de clima real (OpenWeatherMap)
+- Análise preditiva em R com Machine Learning
+- Sistema completo de logging e monitoramento
+- Código otimizado e bem documentado
+
+================================================================================
+INSTRUÇÕES PARA COMPLETAR OS LINKS
+================================================================================
+
+LINK 2 - Circuito Wokwi:
+1. Acesse: https://wokwi.com/
+2. Clique em "New Project" → "ESP32"
+3. Cole o conteúdo do arquivo wokwi_project.json
+4. Adicione o código do arquivo esp32_code/irrigation_system.ino
+5. Clique em "Save" e copie o link compartilhável
+6. Cole o link acima na linha do item 2
+
+LINK 4 - Vídeo YouTube:
+1. Grave vídeo de até 5 minutos mostrando:
+   - Apresentação do projeto e objetivos
+   - Demonstração do circuito no Wokwi funcionando
+   - Explicação da lógica de irrigação
+   - Teste prático: apertar botões, simular condições
+   - Mostrar o código principal e lógica de decisão
+2. Faça upload no YouTube como "Não listado"
+3. Copie o link e cole acima na linha do item 4
+
+================================================================================
+
+Projeto desenvolvido por: Sidney de Lirio Cardoso
+Curso: FIAP - Engenharia de Software
+Disciplina: Computational Thinking with Python
+Data: Outubro 2024

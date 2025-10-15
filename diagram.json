@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_n",
+      "top": -48,
+      "left": 240,
+      "attrs": { "color": "green", "label": "N (Nitrogênio)" }
+    },
+    {
+      "type": "wokwi-pushbutton", 
+      "id": "btn_p",
+      "top": 0,
+      "left": 240,
+      "attrs": { "color": "orange", "label": "P (Fósforo)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_k", 
+      "top": 48,
+      "left": 240,
+      "attrs": { "color": "blue", "label": "K (Potássio)" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 96,
+      "left": 240,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 144,
+      "left": 240,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay",
+      "top": 192,
+      "left": 240,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 240,
+      "left": 240,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_led",
+      "top": 260,
+      "left": 200,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "green", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "green", [] ],
+    
+    [ "btn_n:1.l", "esp:D2", "green", [] ],
+    [ "btn_n:2.r", "esp:GND.1", "black", [] ],
+    
+    [ "btn_p:1.l", "esp:D4", "orange", [] ],
+    [ "btn_p:2.r", "esp:GND.1", "black", [] ],
+    
+    [ "btn_k:1.l", "esp:D5", "blue", [] ],
+    [ "btn_k:2.r", "esp:GND.1", "black", [] ],
+    
+    [ "ldr:VCC", "esp:3V3", "red", [] ],
+    [ "ldr:AO", "esp:A0", "yellow", [] ],
+    [ "ldr:GND", "esp:GND.1", "black", [] ],
+    
+    [ "dht:VCC", "esp:3V3", "red", [] ],
+    [ "dht:SDA", "esp:D15", "cyan", [] ],
+    [ "dht:GND", "esp:GND.2", "black", [] ],
+    
+    [ "relay:VCC", "esp:5V", "red", [] ],
+    [ "relay:IN", "esp:D18", "purple", [] ],
+    [ "relay:GND", "esp:GND.2", "black", [] ],
+    
+    [ "esp:D19", "r_led:1", "yellow", [] ],
+    [ "r_led:2", "led:A", "yellow", [] ],
+    [ "led:C", "esp:GND.2", "black", [] ]
+  ],
+  "dependencies": {
+    "DHT sensor library": "1.4.4"
+  }
+}

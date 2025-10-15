@@ -1,0 +1,146 @@
+ATIVIDADE 1 – UM MAPA DO TESOURO
+FarmTech Solutions - Sistema de Irrigação Inteligente com IoT
+
+================================================================================
+LINKS PARA ENTREGA
+================================================================================
+
+1. Repositório GitHub (Código + README.md):
+https://github.com/sidcardoso/fiap_2025_atv1
+
+
+2. Imagem do Circuito no Wokwi:
+[LINK DO WOKWI - Você precisa salvar o projeto no Wokwi e colar o link aqui]
+Instruções:
+- No Wokwi, clique em "Save" (botão azul superior esquerdo)
+- Faça login se necessário
+- O link será algo como: https://wokwi.com/projects/XXXXXXXXXXXXXXXXX
+- Copie e cole acima substituindo esta linha
+
+
+3. Código C/C++ do ESP32:
+https://github.com/sidcardoso/fiap_2025_atv1/blob/main/esp32_code/irrigation_system.ino
+
+
+4. Vídeo YouTube (não listado, até 5 minutos):
+[LINK DO YOUTUBE - Você precisa gravar e fazer upload do vídeo]
+Instruções:
+- Grave o vídeo demonstrando o sistema no Wokwi (máx 5 min)
+- Faça upload no YouTube como "Não listado"
+- O link será algo como: https://youtu.be/XXXXXXXXXXX
+- Copie e cole acima substituindo esta linha
+
+================================================================================
+RESUMO DO PROJETO
+================================================================================
+
+📋 Sistema de Irrigação Inteligente para Agricultura Digital
+
+🔧 Componentes Implementados:
+- ESP32 DevKit v1 (Microcontrolador)
+- 3 Botões Push (Sensores NPK: Nitrogênio, Fósforo, Potássio)
+- 1 Sensor LDR/Photoresistor (Medição de pH do solo: 0-14)
+- 1 Sensor DHT22 (Umidade e temperatura do solo)
+- 1 Módulo Relé (Controle da bomba de irrigação)
+- 1 LED Azul (Indicador visual de status de irrigação)
+
+⚙️ Funcionalidades:
+✅ Monitoramento em tempo real de 5 parâmetros
+✅ Lógica de decisão inteligente para irrigação
+✅ Controle automático da bomba via relé
+✅ Integração com API meteorológica (OpenWeather - Python)
+✅ Análise estatística e Machine Learning (R)
+✅ Sistema de logging completo
+
+🧠 Lógica de Irrigação:
+O sistema IRRIGA quando:
+- Umidade do solo < 60% (solo seco)
+- E (pH entre 6.0-6.8 OU pelo menos 2 nutrientes NPK presentes)
+- E NÃO há previsão de chuva
+
+O sistema NÃO IRRIGA quando:
+- Umidade > 80% (solo já úmido)
+- Há previsão de chuva ativa
+- pH inadequado E falta de nutrientes
+
+🌟 Diferenciais (Ir Além):
+✅ EXTRA 1: Integração Python + API OpenWeatherMap
+   - Arquivo: python_weather/weather_integration.py
+   - Envia previsão de chuva para o ESP32 via Serial
+
+✅ EXTRA 2: Análise Estatística em R
+   - Arquivo: r_analysis/irrigation_analysis.R
+   - Machine Learning com Random Forest
+   - Análises de correlação e visualizações
+
+📁 Estrutura do Repositório:
+FarmTech_Irrigation_System/
+├── README.md                    # Documentação completa
+├── esp32_code/
+│   └── irrigation_system.ino    # Código principal ESP32
+├── python_weather/
+│   ├── weather_integration.py   # Integração API clima
+│   └── requirements.txt
+├── r_analysis/
+│   ├── irrigation_analysis.R    # Análise estatística
+│   └── data_sample.csv
+├── docs/
+│   ├── circuit_diagram.md       # Diagrama do circuito
+│   └── user_manual.md           # Manual do usuário
+└── wokwi_project.json          # Configuração Wokwi
+
+================================================================================
+INSTRUÇÕES PARA COMPLETAR OS LINKS
+================================================================================
+
+📌 LINK 2 - Salvar Projeto no Wokwi:
+
+1. No Wokwi, verifique se a simulação está funcionando
+2. Clique no botão "SAVE" (canto superior esquerdo, azul)
+3. Se não estiver logado, faça login com Google/GitHub
+4. O projeto será salvo automaticamente
+5. Clique em "SHARE" para obter o link público
+6. Copie o URL (formato: https://wokwi.com/projects/XXXXXXXXX)
+7. Cole acima no item 2, substituindo o texto em colchetes
+
+📌 LINK 4 - Upload Vídeo YouTube:
+
+CONTEÚDO DO VÍDEO (4-5 minutos):
+- 0:00-0:30: Apresentação (nome, projeto, objetivos)
+- 0:30-1:30: Demonstração solo seco + nutrientes → bomba liga
+- 1:30-2:15: Demonstração solo úmido → bomba desliga
+- 2:15-3:15: Demonstração previsão de chuva (RAIN:1)
+- 3:15-4:15: Demonstração teste de pH
+- 4:15-5:00: Conclusão (recap da lógica + GitHub)
+
+COMO FAZER UPLOAD:
+1. Grave a tela do Wokwi funcionando (use OBS, ShareX ou Windows Game Bar)
+2. Acesse: https://studio.youtube.com
+3. Clique em "Criar" → "Enviar vídeo"
+4. Selecione o arquivo
+5. Título: "FarmTech Solutions - Sistema IoT Irrigação Inteligente [FIAP]"
+6. Descrição: Incluir link do GitHub
+7. IMPORTANTE: Marque como "Não listado" (não público, não privado)
+8. Clique em "Publicar"
+9. Copie o link do vídeo
+10. Cole acima no item 4
+
+================================================================================
+VALIDAÇÃO FINAL
+================================================================================
+
+Antes de enviar, verifique:
+✅ README.md está completo e bem formatado
+✅ Código ESP32 está comentado e funcionando
+✅ Todos os 4 links estão preenchidos e funcionais
+✅ Vídeo está como "Não listado" no YouTube
+✅ Projeto Wokwi está público e acessível
+✅ Repositório GitHub está público
+
+================================================================================
+
+Projeto desenvolvido por: Sidney de Lirio Cardoso
+Curso: FIAP - Engenharia de Software
+Disciplina: Computational Thinking with Python - Fase 2
+Data: Outubro 2024
+GitHub: https://github.com/sidcardoso/fiap_2025_atv1

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_nitrogen",
+      "top": -20,
+      "left": 200,
+      "attrs": { "color": "green", "label": "N" }
+    },
+    {
+      "type": "wokwi-pushbutton", 
+      "id": "btn_phosphorus",
+      "top": 20,
+      "left": 200,
+      "attrs": { "color": "orange", "label": "P" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_potassium", 
+      "top": 60,
+      "left": 200,
+      "attrs": { "color": "purple", "label": "K" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr_ph",
+      "top": 100,
+      "left": 200,
+      "attrs": { "label": "pH Sensor" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht_humidity",
+      "top": 140,
+      "left": 200,
+      "attrs": { "label": "Soil Humidity" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay_pump",
+      "top": 180,
+      "left": 200,
+      "attrs": { "label": "Water Pump" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_indicator",
+      "top": 220,
+      "left": 200,
+      "attrs": { "color": "blue", "label": "Irrigation Status" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 120,
+      "left": 150,
+      "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2", 
+      "top": 240,
+      "left": 150,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:D2", "btn_nitrogen:1.l", "", [] ],
+    [ "btn_nitrogen:2.r", "esp:GND.1", "", [] ],
+    [ "esp:D4", "btn_phosphorus:1.l", "", [] ],
+    [ "btn_phosphorus:2.r", "esp:GND.1", "", [] ],
+    [ "esp:D5", "btn_potassium:1.l", "", [] ],
+    [ "btn_potassium:2.r", "esp:GND.1", "", [] ],
+    [ "esp:3V3", "ldr_ph:VCC", "", [] ],
+    [ "esp:A0", "ldr_ph:AO", "", [] ],
+    [ "ldr_ph:GND", "r1:1.l", "", [] ],
+    [ "r1:2.r", "esp:GND.2", "", [] ],
+    [ "esp:D15", "dht_humidity:SDA", "", [] ],
+    [ "esp:3V3", "dht_humidity:VCC", "", [] ],
+    [ "dht_humidity:GND", "esp:GND.2", "", [] ],
+    [ "esp:D18", "relay_pump:IN", "", [] ],
+    [ "esp:5V", "relay_pump:VCC", "", [] ],
+    [ "relay_pump:GND", "esp:GND.2", "", [] ],
+    [ "esp:D19", "r2:1.l", "", [] ],
+    [ "r2:2.r", "led_indicator:A", "", [] ],
+    [ "led_indicator:C", "esp:GND.2", "", [] ]
+  ],
+  "dependencies": {}
+}
